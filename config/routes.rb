@@ -7,4 +7,16 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  
+  # Read all
+  get 'lists', to: 'lists#index'
+
+  # Create a new list
+  get  'lists/new', to: 'lists#new', as: :new_movie
+  post 'restaurants', to: 'restaurants#create'
+  
+  # Read one
+  get 'lists/:id', to: 'lists#show'
+
+  
 end
